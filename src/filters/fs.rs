@@ -21,7 +21,7 @@ use http::StatusCode;
 use hyper::Body;
 use mime_guess;
 use tokio::fs::File as TkFile;
-use tokio::io::AsyncRead;
+use tokio::io::{AsyncRead, AsyncSeekExt};
 use urlencoding::decode;
 
 use crate::filter::{Filter, FilterClone, One};
